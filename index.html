@@ -1,37 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Event Registration Form</title>
-    <script>
-        function validateForm() {
-            let name = document.forms["regForm"]["name"].value;
-            let email = document.forms["regForm"]["email"].value;
-            let password = document.forms["regForm"]["password"].value;
-
-            if (name === "" || email === "" || password === "") {
-                alert("Enter all fields");
-                return false;
-            }
-
-            alert("Registration Successful");
-            return true;
-        }
-    </script>
+  <title>User Registration Form</title>
 </head>
 <body>
-    <form id="regForm" name="regForm" onsubmit="return validateForm()">
-        <h2>Event Registration Form:</h2>
+  <h2>User Registration</h2>
+  <form>
+    <label>Full Name:</label><br>
+    <input type="text" name="fullname" required><br><br>
 
-        <label>Name:</label><br>
-        <input type="text" name="name"><br><br>
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
 
-        <label>Email:</label><br>
-        <input type="email" name="email"><br><br>
+    <label>Password:</label><br>
+    <input type="password" name="password" required><br><br>
 
-        <label>Password:</label><br>
-        <input type="password" name="password"><br><br>
+    <label>Phone Number:</label><br>
+    <input type="text" name="phone" required><br><br>
 
-        <input type="submit" value="Register">
-    </form>
+    <input type="submit" value="Submit">
+  </form>
 </body>
 </html>
